@@ -5,24 +5,28 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class FirstActivity extends AppCompatActivity {
     EditText angka1, angka2;
     TextView hasil;
-    Button btnTambah, btnKurang, btnKali, btnBagi;
+    Button btnTambah, btnKurang, btnKali, btnBagi, btnClear;
+    LinearLayout containerHasil;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
 
-        angka1 = (EditText) this.findViewById(R.id.angka1);
-        angka2 = (EditText) this.findViewById(R.id.angka2);
-        hasil = (TextView) this.findViewById(R.id.hasil);
-        btnTambah = (Button) this.findViewById(R.id.btnTambah);
-        btnKurang = (Button) this.findViewById(R.id.btnKurang);
-        btnKali = (Button) this.findViewById(R.id.btnKali);
-        btnBagi = (Button) this.findViewById(R.id.btnBagi);
+        angka1 = findViewById(R.id.angka1);
+        angka2 = findViewById(R.id.angka2);
+        hasil = findViewById(R.id.hasil);
+        btnTambah = findViewById(R.id.btnTambah);
+        btnKurang = findViewById(R.id.btnKurang);
+        btnKali = findViewById(R.id.btnKali);
+        btnBagi = findViewById(R.id.btnBagi);
+        btnClear = findViewById(R.id.btnClear);
+        containerHasil = findViewById((R.id.container_hasil));
 
         btnTambah.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,21 +52,47 @@ public class FirstActivity extends AppCompatActivity {
                 hitung('/');
             }
         });
+        btnClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                angka1.setText("");
+                angka2.setText("");
+                containerHasil.setVisibility(View.GONE);
+            }
+        });
     }
 
     protected void hitung(char operator) {
-        double operand1 = Double.parseDouble(angka1.getText().toString());
-        double operand2 = Double.parseDouble(angka2.getText().toString());
-        double result = .0;
+        boolean err = false;
+        String opr1 = angka1.getText().toString();
+        String opr2 = angka1.getText().toString();
 
-        switch (operator) {
-            case ('+') : result = operand1 + operand2; break;
-            case ('-') : result = operand1 - operand2; break;
-            case ('*') : result = operand1 * operand2; break;
-            case ('/') : result = operand1 / operand2;
+        if (opr1 == null || opr1.isEmpty()) {
+            angka1.setError(getString(R.string.warning_angka1));
+            err = true;
+        }
+        if (opr2 == null || opr2.isEmpty()) {
+            angka2.setError(getString(R.string.warning_angka2));
+            err = true;
         }
 
-        hasil.setText(String.valueOf(result));
+        if (!err) {
+            double operand1 = Double.parseDouble(angka1.getText().toString());
+            double operand2 = Double.parseDouble(angka2.getText().toString());
+            double result = .0;
+
+            switch (operator) {
+                case ('+') : result = operand1 + operand2; break;
+                case ('-') : result = operand1 - operand2; break;
+                case ('*') : result = operand1 * operand2; break;
+                case ('/') : result = operand1 / operand2;
+            }
+
+            containerHasil.setVisibility(View.VISIBLE);
+            hasil.setText(String.format(getString(R.string.calculation), operand1, operator, operand2, result));
+        } else {
+            containerHasil.setVisibility(View.GONE);
+        }
     }
 
     private static double parseStringToDouble(String value) {

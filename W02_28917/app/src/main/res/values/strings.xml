@@ -1,11 +1,19 @@
 <resources>
     <string name="app_name">W02_28917</string>
 
-    <string name="angka1">Angka 1</string>
-    <string name="angka2">Angka 2</string>
+    <string name="kalkulator">Mini Kalkulator</string>
+    <string name="angka1">Angka 1:</string>
+    <string name="hint_angka1">Masukkan angka pertama</string>
+    <string name="warning_angka1">Angka pertama wajib diisi</string>
+    <string name="angka2">Angka 2:</string>
+    <string name="hint_angka2">Masukkan angka kedua</string>
+    <string name="warning_angka2">Angka kedua wajib diisi</string>
     <string name="btnTambah">Tambah</string>
     <string name="btnKurang">Kurang</string>
     <string name="btnKali">Kali</string>
     <string name="btnBagi">Bagi</string>
-    <string name="hasil">Hasil</string>
+    <string name="btnClear">Clear</string>
+    <string name="hasil">Hasil:</string>
+
+    <string name="calculation">%.1f %s %.1f = %.1f</string>
 </resources>
