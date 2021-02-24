@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">W05_28917</string>
+    <string name="rect">Rect</string>
+    <string name="oval">Oval</string>
+    <string name="line">Line</string>
+    <string name="path">Path</string>
+</resources>
