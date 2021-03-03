@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">W06_28917</string>
+
+    <string name="btnTProperty">Tutorial Property Animations</string>
+    <string name="btnTDrawable">Tutorial Drawable Animations</string>
+    <string name="btnTPhysics">Tutorial Physics Animations</string>
+
+    <string name="btnSpring">Hallo\nSpring</string>
+    <string name="btnFling">Hallo\nFling</string>
+</resources>
