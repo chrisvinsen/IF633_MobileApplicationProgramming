@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">W07_28917</string>
+
+    <string name="btnImg">Ambil Foto</string>
+    <string name="btnVid">Ambil Video</string>
+</resources>
