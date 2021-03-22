@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainContainer"
+    android:background="@drawable/bg_container_dark_gray"
+    tools:context=".ui.activity.PlayerActivity"
+    android:orientation="vertical"
+    >
+    
+    <LinearLayout
+        android:id="@+id/layoutTopButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/dimen_6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:contentDescription="@string/text_button"
+            android:layout_width="@dimen/dimen_16"
+            android:layout_height="@dimen/dimen_16"
+            android:src="@drawable/ic_chevron_left"
+            android:layout_gravity="center"
+            app:tint="@color/gray"
+            android:layout_marginStart="@dimen/dimen_6"
+        />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/text_now_playing"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/dimen_text_xxxlarge"
+            android:textStyle="bold"
+            android:layout_marginEnd="@dimen/dimen_16"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ctrCard"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_200"
+        app:layout_constraintTop_toBottomOf="@id/layoutTopButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/imgCoverArt"
+            android:contentDescription="@string/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bg_default_music_art"
+            android:scaleType="centerCrop"
+            android:padding="@dimen/dimen_14"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/ctrCard"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_song_name"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/dimen_text_xxxlarge"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_marginHorizontal="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_10"
+            />
+
+        <TextView
+            android:id="@+id/tvArtist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_song_artist"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/dimen_text_xxlarge"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            />
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/layoutSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_24"
+        android:layout_above="@id/layoutBottomButton"
+        android:layout_marginBottom="@dimen/dimen_10"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/layoutBottomButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvDurationPlayed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_14"
+                android:text="@string/text_song_time"
+                android:textColor="@color/gray"
+                app:layout_constraintEnd_toStartOf="@+id/tvDurationTotal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDurationTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_14"
+                android:text="@string/text_song_time"
+                android:textColor="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvDurationPlayed" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginEnd="@dimen/dimen_16"
+            />
+
+    </LinearLayout>
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutBottomButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/bg_gradient"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingVertical="@dimen/dimen_6"
+        >
+
+        <ImageView
+            android:id="@+id/imgShuffle"
+            android:contentDescription="@string/text_button"
+            android:layout_width="@dimen/dimen_12"
+            android:layout_height="@dimen/dimen_12"
+            android:src="@drawable/ic_shuffle_on"
+            app:tint="@color/gray"
+            android:layout_marginStart="@dimen/dimen_8"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/imgPrev"
+            android:contentDescription="@string/text_button"
+            android:layout_width="@dimen/dimen_16"
+            android:layout_height="@dimen/dimen_16"
+            android:src="@drawable/ic_skip_previous"
+            android:layout_toStartOf="@id/fabPlayPause"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dimen_10"
+            app:tint="@color/gray"
+            app:layout_constraintHorizontal_bias=".6"
+            app:layout_constraintLeft_toLeftOf="@id/imgShuffle"
+            app:layout_constraintRight_toRightOf="@id/fabPlayPause"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabPlayPause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:focusable="true"
+            android:clickable="true"
+            android:backgroundTint="@color/green_var"
+            android:tint="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="@string/text_button" />
+
+        <ImageView
+            android:id="@+id/imgNext"
+            android:contentDescription="@string/text_button"
+            android:layout_width="@dimen/dimen_16"
+            android:layout_height="@dimen/dimen_16"
+            android:src="@drawable/ic_skip_next"
+            android:layout_toEndOf="@id/fabPlayPause"
+            android:layout_centerVertical="true"
+            app:tint="@color/gray"
+            android:layout_marginStart="@dimen/dimen_10"
+            app:layout_constraintHorizontal_bias=".4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/fabPlayPause"
+            app:layout_constraintRight_toRightOf="@id/imgRepeat"
+            />
+
+        <ImageView
+            android:id="@+id/imgRepeat"
+            android:contentDescription="@string/text_button"
+            android:layout_width="@dimen/dimen_12"
+            android:layout_height="@dimen/dimen_12"
+            android:src="@drawable/ic_repeat_on"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            app:tint="@color/gray"
+            android:layout_marginEnd="@dimen/dimen_8"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

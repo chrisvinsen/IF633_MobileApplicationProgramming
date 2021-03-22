@@ -1,4 +1,4 @@
-package id.ac.umn.uts_sdotify.model;
+package id.ac.umn.uts_sdotify.object;
 
 public class MusicFiles {
     private String path;
@@ -57,4 +57,5 @@ public class MusicFiles {
     public void setDuration(String duration) {
         this.duration = duration;
     }
+
 }

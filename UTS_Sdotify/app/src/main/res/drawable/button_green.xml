@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-
+    <solid android:state_enabled="false" android:color="@color/gray" />
+    <solid android:state_pressed="true" android:color="@color/green_var" />
+    <solid android:state_selected="true" android:color="@color/green_var" />
+    <solid android:color="@color/green" />
+    <corners android:radius="40dp" />
 </shape>

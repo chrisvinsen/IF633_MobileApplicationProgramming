@@ -1,9 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activity.LoginActivity">
+    tools:context=".ui.activity.LoginActivity"
+    android:background="@color/dark_gray"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_10"
+    >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:contentDescription="@string/app_name"
+        android:id="@+id/imgLogo"
+        android:layout_width="@dimen/dimen_60"
+        android:layout_height="@dimen/dimen_60"
+        android:src="@drawable/logo"
+        app:tint="@color/green"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:layout_marginBottom="@dimen/dimen_8"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/dimen_10"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_username"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/dimen_text_xxxlarge"
+            android:layout_marginStart="@dimen/dimen_2"
+            android:layout_marginBottom="@dimen/dimen_2"
+            />
+
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_hint_username"
+            android:background="@drawable/et_white"
+            android:layout_marginBottom="@dimen/dimen_14"
+            android:paddingVertical="@dimen/dimen_4"
+            android:paddingHorizontal="@dimen/dimen_8"
+            android:textSize="@dimen/dimen_text_xxxlarge"
+            android:inputType="text"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_password"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/dimen_text_xxxlarge"
+            android:layout_marginStart="@dimen/dimen_2"
+            android:layout_marginBottom="@dimen/dimen_2"
+            />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_hint_password"
+            android:background="@drawable/et_white"
+            android:paddingVertical="@dimen/dimen_4"
+            android:paddingHorizontal="@dimen/dimen_8"
+            android:textSize="@dimen/dimen_text_xxxlarge"
+            android:inputType="textPassword"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvWarning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginStart="@dimen/dimen_2"
+        />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_login"
+        style="@style/Button.Green"
+        android:paddingHorizontal="@dimen/dimen_20"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:enabled="false"
+        />
+
+</LinearLayout>

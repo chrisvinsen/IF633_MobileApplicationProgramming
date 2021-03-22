@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Sdotify</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="text_username">Username</string>
+    <string name="text_hint_username">your username</string>
+    <string name="text_password">Password</string>
+    <string name="text_hint_password">your password</string>
+
+    <string name="text_login">Log in</string>
+    <string name="text_about">Profile</string>
+    <string name="text_music">Music</string>
+    <string name="text_logout">Log out</string>
+    <string name="text_tagline">Millions of songs.\nFree on Sdotify.</string>
+
+    <string name="text_login_warning">This username and password combination is incorrect</string>
+
+    <string name="dialog_logout_message">Are you sure want to logout?</string>
+    <string name="dialog_logout_title">Log Out Sdotify</string>
+
+    <string name="dialog_welcome_message">Christianto Vinsen B.\n00000028917 </string>
+    <string name="dialog_welcome_title"> Selamat Datang! </string>
+
+    <string name="text_created_by">Dibuat oleh:</string>
+    <string name="text_name_label">Nama : </string>
+    <string name="text_nim_label">NIM : </string>
+    <string name="text_class_label">Kelas : </string>
+    <string name="text_name_value">Christianto Vinsen B.</string>
+    <string name="text_nim_value">00000028917</string>
+    <string name="text_class_value">BL</string>
+    <string name="text_reference">Referensi:</string>
+    <string name="text_reference_yt">Referensi Youtube</string>
+    <string name="text_reference_yt_1">Music Player Apps Series Tutorial</string>
+    <string name="text_reference_yt_url_1">https://youtu.be/bsXaM4G4D_w</string>
+    <string name="text_reference_yt_2">Best Practice Theme and Style</string>
+    <string name="text_reference_yt_url_2">https://youtu.be/sNSlDfaNq-0</string>
+    <string name="text_reference_yt_3">Shared Preferences</string>
+    <string name="text_reference_yt_url_3">https://youtu.be/4WxKQTUweVg</string>
+    <string name="text_reference_yt_4">Build Responsive Apps 1</string>
+    <string name="text_reference_yt_url_4">https://youtu.be/ObC-fyCA9IE</string>
+    <string name="text_reference_yt_5">Build Responsive Apps 2</string>
+    <string name="text_reference_yt_url_5">https://youtu.be/5lSQcJjZPFs</string>
+    <string name="text_reference_yt_6">Build Responsive Apps 3</string>
+    <string name="text_reference_yt_url_6">https://youtu.be/n784uKM6ayg</string>
+    <string name="text_reference_web">Referensi Website</string>
+    <string name="text_reference_web_1">Music Player Apps</string>
+    <string name="text_reference_web_url_1">https://www.geeksforgeeks.org/how-to-build-a-simple-music-player-app-using-android-studio/</string>
+    <string name="text_reference_web_2">Shared Preferences</string>
+    <string name="text_reference_web_url_2">https://www.tutorialspoint.com/android/android_shared_preferences.htm</string>
+    <string name="text_reference_web_3">Alert Dialog</string>
+    <string name="text_reference_web_url_3">https://www.javatpoint.com/android-alert-dialog-example</string>
+    <string name="text_reference_web_4">Navigation Bar</string>
+    <string name="text_reference_web_url_4">https://code.tutsplus.com/tutorials/how-to-code-a-bottom-navigation-bar-for-an-android-app--cms-30305</string>
+    <string name="text_reference_web_5">Build Responsive Apps 1</string>
+    <string name="text_reference_web_url_5">https://developer.android.com/training/multiscreen/screensizes</string>
+    <string name="text_reference_web_6">Build Responsive Apps 2</string>
+    <string name="text_reference_web_url_6">https://medium.com/androiddevelopers/building-a-responsive-ui-in-android-7dc7e4efcbb3</string>
+
+    <string name="text_now_playing">Now Playing</string>
+    <string name="text_button">Button</string>
+    <string name="text_song_name">This is song name</string>
+    <string name="text_song_artist">Artist name</string>
+    <string name="text_song_time">0:00</string>
+
+    <string name="text_good_morning">Selamat pagi</string>
+    <string name="text_good_afternoon">Selamat siang</string>
+    <string name="text_good_evening">Selamat sore</string>
+    <string name="text_good_night">Selamat malam</string>
+</resources>
