@@ -4,6 +4,194 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="4sp"
     tools:context=".first_tutorial.FirstTutorialActivity">
+
+    <RadioGroup
+        android:id="@+id/rgType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@id/glL"
+        app:layout_constraintRight_toRightOf="@id/glR"
+        app:layout_constraintTop_toTopOf="@id/glT">
+
+        <RadioButton
+            android:id="@+id/rbTemporary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tx_temporary" />
+
+        <RadioButton
+            android:id="@+id/rbInternal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_weight="1"
+            android:text="@string/tx_internal" />
+
+        <RadioButton
+            android:id="@+id/rbExternal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tx_external" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/etFilename"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/tx_filename"
+        app:layout_constraintLeft_toLeftOf="@id/glL"
+        app:layout_constraintRight_toRightOf="@id/glR"
+        app:layout_constraintTop_toBottomOf="@+id/rgType" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ctrButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/glL"
+        app:layout_constraintRight_toRightOf="@+id/glR"
+        app:layout_constraintTop_toBottomOf="@+id/etFilename">
+
+        <Button
+            android:id="@+id/btnOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:onClick="onBtnOpenClicked"
+            android:text="@string/tx_open"
+            android:paddingHorizontal="14sp"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/btnSave"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:onClick="onBtnSaveClicked"
+            android:text="@string/tx_save"
+            android:paddingHorizontal="14sp"
+            app:layout_constraintLeft_toRightOf="@id/btnOpen"
+            app:layout_constraintRight_toLeftOf="@id/btnDelete"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:onClick="onBtnDeleteClicked"
+            android:text="@string/tx_delete"
+            android:paddingHorizontal="14sp"
+            app:layout_constraintLeft_toRightOf="@id/btnSave"
+            app:layout_constraintRight_toLeftOf="@id/btnClear"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:onClick="onBtnClearClicked"
+            android:text="@string/tx_clear"
+            android:paddingHorizontal="14sp"
+            app:layout_constraintLeft_toRightOf="@id/btnDelete"
+            app:layout_constraintRight_toLeftOf="@+id/btnExit"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:onClick="onBtnExitClicked"
+            android:text="@string/tx_exit"
+            android:paddingHorizontal="14sp"
+            app:layout_constraintLeft_toRightOf="@+id/btnClear"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/ctrButton"
+        app:layout_constraintBottom_toBottomOf="@id/glB"
+        app:layout_constraintLeft_toLeftOf="@id/glL"
+        app:layout_constraintRight_toRightOf="@id/glR"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <EditText
+                android:id="@+id/etText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start|fill|top"
+                android:inputType="textMultiLine"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="10dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="10dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="10dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="10dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

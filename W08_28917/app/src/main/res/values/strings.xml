@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">W08_28917</string>
+
+    <string name="tx_tutorial1">Tutorial Android Storage</string>
+    <string name="tx_tutorial2">Tutorial Saved Instance \n and Shared Preferences</string>
+
+    <string name="tx_temporary">Temporary</string>
+    <string name="tx_internal">Internal</string>
+    <string name="tx_external">External</string>
+    <string name="tx_filename">Nama File</string>
+    <string name="tx_open">Open</string>
+    <string name="tx_save">Save</string>
+    <string name="tx_delete">Delete</string>
+    <string name="tx_clear">Clear</string>
+    <string name="tx_exit">Exit</string>
+    
+    <string name="tx_addition">TAMBAH</string>
+    <string name="tx_reset">RESET</string>
+    <string name="tx_black">HITAM</string>
+    <string name="tx_red">MERAH</string>
+    <string name="tx_blue">BIRU</string>
+    <string name="tx_green">HIJAU</string>
+</resources>
